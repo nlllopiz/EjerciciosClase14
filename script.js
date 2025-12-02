@@ -261,6 +261,9 @@ async function cargarProductosApi() {
         listaUL.innerHTML = '<li id="mensaje-error">❌ Error al cargar el catálogo.</li>';
         // Devolvemos un array vacío para evitar errores posteriores
         return []; 
+
+
+        
     }
 }
 
