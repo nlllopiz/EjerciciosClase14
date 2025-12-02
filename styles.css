@@ -1,0 +1,304 @@
+/* Estilos generales ******************************/
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", sans-serif;
+    color: #d60609;
+    margin-bottom: 1rem;
+}
+
+button {
+    color: #d60609;
+    background-color: white;
+    padding: .5rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+/* Encabezado **************************************/
+.encabezado {
+    background-color: white;
+    font-style: oblique;
+    font-size: larger;
+    color: #d60609;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.encabezado img {
+    width: 250px;
+}
+
+/* Barra de navegación */
+.menu--nav {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #d60609;
+}
+
+/* Video */
+#video video {
+    width: 100%;
+    display: block;
+}
+
+/* Acerca de ***************************************/
+#acercaDe {
+    padding: 3rem;
+}
+
+/* Productos ***************************************/
+#productos {
+    padding: 3rem;
+    background-color: brown;
+}
+
+#productos h2 {
+    color: black;
+    margin-bottom: 2rem;
+}
+
+.productos--contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.producto--card {
+    width: 15rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.producto--card--contenido {
+    background-color: #000;
+    color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.producto--card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    display: block;
+}
+
+.card-descripcion {
+    text-align: justify;
+}
+
+.card--precio {
+    text-align: center;
+}
+
+/* Reseñas ****************************************************/
+#resenias {
+    padding: 3rem;
+}
+
+.resenias--contendor {
+    display: grid;
+    /*grid-template-columns: 20rem 30rem 40rem;*/
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    /*grid-template-columns: repeat(3, 20rem);*/
+    /*grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));*/
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-template-rows: auto;
+    grid-template-rows: 28rem 28rem 28rem;*/
+    gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+.tarjeta {
+    width: 20rem;
+    height: 28rem;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s, box-sahdow 0.5s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.tarjeta--contenido {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+/* Contacto ***************************************************/
+#contacto {
+    position: relative;
+    /* para colocar sobre él un overlay*/
+    background-image: url("./imagenes/vidMendoza.webp");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 3rem;
+    z-index: 0;
+}
+
+#contacto::before {
+    /* overlay: capa semitransparente*/
+    content: "";
+    /*contenido vacío*/
+    position: absolute;
+    /*es absoluta a su padre relativo*/
+    /*las coordenadas de la posición absoluta se ponen en 0
+    para que conicida con la esquina superior izquierda de 
+    la imagen de fondo*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /*50% de transparencia*/
+    z-index: -1;
+    /*coloca el overlay detrás del contenido*/
+}
+
+.formulario--contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    gap: 2rem;
+} 
+
+.contenedor-textarea {
+    display: flex;
+    align-items: center;
+}
+
+#contacto input,
+textarea {
+    width: 11rem;
+    line-height: 2rem;
+}
+
+#contacto input:focus,
+textarea:focus {
+    background-color: #d60609;
+    color: white;
+    transition: all 0.5s;
+}
+
+/* Footer ***************************************/
+footer {
+    background-color: black;
+    font-style: italic;
+    font-size: smaller;
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.footer--contenido {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.footer--contenido--redes--logos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+/* Media Queries **************************************************/
+/* Para celulares*/
+@media(max-width: 600px) {
+
+    /* max-width: 600px  desde 0 hasta 600px */
+    .encabezado img {
+        width: 150px;
+    }
+
+    #video video {
+        display: none;
+    }
+
+    .resenias--contendor {
+        grid-template-columns: 1fr;
+    }
+
+    #contacto input,
+    textarea {
+        width: 100%;
+        line-height: 2rem;
+    }
+
+}
+
+/* Para tablets*/
+@media(min-width: 601px) {
+
+    /* min-width: 601px  desde 601px en adelante */
+    .encabezado img {
+        width: 200px;
+    }
+
+    .resenias--contendor {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Para monitores*/
+@media(min-width: 1200px) {
+
+    /* min-width: 1200px  desde 1200px en adelante */
+    .encabezado img {
+        width: 240px;
+
+    }
+
+    .resenias--contendor {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}

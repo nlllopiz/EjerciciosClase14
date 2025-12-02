@@ -1,0 +1,37 @@
+[
+    {
+            "id": 1,
+            "img": "imagenes/vinoM2.png",
+            "nombre": "Reserva Malbec",
+            "descripcion": "Vino tinto Reserva Malbec",
+            "precio": 13000
+    },
+    {
+            "id": 2,
+            "img": "imagenes/vinoM2.png",
+            "nombre": "Cabernet Franc",
+            "descripcion": "Vino tinto Cabernet Franc",
+            "precio": 12000
+    },
+    {
+            "id": 3,
+            "img": "imagenes/vinoM2.png",
+            "nombre": "Bonarda",
+            "descripcion": "Vino tinto Bonarda",
+            "precio": 9000
+    },
+    {
+            "id": 4,
+            "img": "imagenes/vinoM2.png",
+            "nombre": "Chardonnay",
+            "descripcion": "Vino blanco Chardonnay",
+            "precio": 11000
+    },
+    {
+            "id": 5,
+            "img": "imagenes/vinoM2.png",
+            "nombre": "Torrontés",
+            "descripcion": "Vino blanco Torrontés",
+            "precio": 10000
+    }
+]
